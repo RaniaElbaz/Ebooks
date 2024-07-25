@@ -1,0 +1,14 @@
+a {
+    all: unset;
+}
+
+.navLink {
+    padding-block: 0.2rem;
+    padding-inline: 0.3rem;
+    cursor: pointer;
+}
+
+.activeLink {
+    color: green;
+    border-bottom: 1px solid green;
+}

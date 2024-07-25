@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background: black;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background: grey;
+    padding: 20px;
+    width: 50%;
+}
+
+
+.inputContainer {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.label {
+    margin-bottom: 5px;
+}
+
+
+.input {
+    all: unset;
+    padding-block: 10px;
+    width: 100%;
+}
+
+
+.button {
+    all: unset;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    background: rgb(85, 231, 72);
+}

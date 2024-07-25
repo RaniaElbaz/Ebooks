@@ -1,0 +1,21 @@
+.header {
+    padding: 0.5rem;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.loginLink {
+    color: white;
+    cursor: pointer;
+}
+
+a {
+    all: unset;
+}
+
+.userPfp {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}

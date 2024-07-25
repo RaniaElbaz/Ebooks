@@ -1,0 +1,50 @@
+.ebooksDetailsPage {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.mainWrapper {
+    display: flex;
+    column-gap: 3rem;
+}
+
+.aside {
+    width: 30%;
+    background-color: rgb(39, 39, 39);
+    padding: 0.7rem;
+}
+
+.aside>section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.page {
+    padding: 0.3rem;
+}
+
+.activePage {
+    padding: 0.3rem;
+    background-color: rgb(85, 231, 72);
+    ;
+}
+
+.detailsWrapper {
+    flex: 1;
+    display: flex;
+}
+
+.detailsWrapper>img {
+    width: 100%;
+    height: 60vh;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}

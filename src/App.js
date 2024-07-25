@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import ProtectedLayout from "./layouts/ProtectedLayout";
+import Layout from "./layouts/layout";
+import EbookDetails from "./pages/EbookDetails";
+import Ebooks from "./pages/Ebooks";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const getLayout = (path, component) => {
+        const authRoutes = ["login"];
+        const protectedRoutes = ["/product-overview"];
+        if (authRoutes.includes(path)) {
+            return component;
+        } else if (protectedRoutes.includes(path)) {
+            return <ProtectedLayout>{component}</ProtectedLayout>;
+        } else {
+            return <Layout>{component}</Layout>;
+        }
+    };
+
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={getLayout("", <Home />)} />
+                <Route path="/login" element={getLayout("login", <Login />)} />
+                <Route
+                    path="/ebook-products"
+                    element={getLayout("ebook-products", <Ebooks />)}
+                />
+                <Route
+                    path="/product-overview/:id"
+                    element={getLayout("product-overview/:id", <EbookDetails />)}
+                />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;
